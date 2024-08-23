@@ -1,0 +1,24 @@
+
+    <form action="">
+        <div>
+            <label for="">Cine
+                <input #cine type="text" name="cine">
+            </label>
+        </div>
+        <br>
+        <div>
+            <label for="">Direccion
+                <input #direccion type="text" name="direccion">
+            </label>
+        </div>
+        <br>
+        <div>
+            <label for="">Ciudad
+                <input #ciudad type="text" name="ciudad">
+            </label>
+        </div>
+        <br>
+        <div>
+            <button type="button" (click)="storeCine(cine,direccion,ciudad)">REGISTRAR</button>
+        </div>
+    </form>

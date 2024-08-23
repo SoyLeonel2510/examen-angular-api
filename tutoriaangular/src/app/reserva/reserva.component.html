@@ -1,0 +1,29 @@
+<form action="">
+    <div>
+        <label for="numero_asientos">Número de Asientos
+            <input #numero_asientos type="text" name="numero_asientos">
+        </label>
+    </div>
+    <br>
+    <div>
+        <label for="">cantidad_asientos
+            <input #cantidad_asientos type="text" name="cantidas_asientos">
+        </label>
+    </div>
+    <br>
+    <div>
+        <label for="habitacion">Habitacion
+            <select #habitacion_id name="habitacion" >
+                <option value="0">SELECCIONE.....</option>
+                @for (item of habitaciones; track $index) {
+                    <option value="{{item.id}}" >{{item.id}}</option>
+                }
+            </select>
+        </label>
+    </div>
+    <br>
+    <div>
+        <button type="button" (click)="storeReserva(cantidad_asientos,habitacion_id)">REGISTRAR</button>
+    </div>
+</form>
+

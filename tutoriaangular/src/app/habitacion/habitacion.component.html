@@ -1,0 +1,34 @@
+<form action="">
+    <div>
+        <label for="">numero_habitacion
+            <input #numero_habitacion type="text" name="numero_habitacion">
+        </label>
+    </div>
+    <br>
+    <div>
+        <label for="">numero_asientos
+            <input #numero_asientos type="text" name="numero_asientos">
+        </label>
+    </div>
+    <br>
+    <div>
+        <label for="">pelicula
+            <input #pelicula type="text" name="pelicula">
+        </label>
+    </div>
+    <br>
+    <div>
+        <label for="cine">Cine
+            <select #cine name="cine" >
+                <option value="0">SELECCIONE.....</option>
+                @for (item of cines; track $index) {
+                    <option value="{{item.id}}">{{item.nombre}}</option>
+                }
+            </select>
+        </label>
+    </div>
+    <br>
+    <div>
+        <button type="button" (click)="storeHabitacion(numero_habitacion,numero_asientos,pelicula,cine)">REGISTRAR</button>
+    </div>
+</form>
